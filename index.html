@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satvik Jogadand | Insurance & Risk Management Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #111827;
+            --darker: #0f172a;
+            --light: #f8fafc;
+            --lighter: #ffffff;
+            --gray: #94a3b8;
+            --gradient: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
+            --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition-slow);
+        }
+        
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        header.scrolled .logo,
+        header.scrolled .nav-links a,
+        header.scrolled .mobile-menu-btn {
+            color: var(--lighter);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            transition: var(--transition);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: calc(100% - 24px);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-btn:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1) 0.2s;
+        }
+        
+        .hero.animate-in h1,
+        .hero.animate-in p,
+        .hero.animate-in .hero-buttons {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: white;
+            color: var(--primary);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+        
+        .btn-icon {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Floating Elements */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            z-index: 1;
+        }
+        
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -100px;
+            left: -100px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            bottom: -50px;
+            right: -50px;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent);
+            top: 40%;
+            right: 20%;
+            animation: float 12s ease-in-out infinite 2s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-20px) translateX(20px);
+            }
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            margin-bottom: 80px;
+            text-align: center;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .section-title.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 16px auto 0;
+            color: var(--gray);
+            font-size: 1.125rem;
+        }
+        
+        .section-subtitle {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .about-image.animate-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            transform: translateX(50px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .about-text.animate-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.125rem;
+            color: var(--dark);
+            opacity: 0.9;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            background: var(--lighter);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .skills-category {
+            background: var(--lighter);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .skills-category.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .skills-category:nth-child(2) {
+            border-top-color: var(--secondary);
+            transition-delay: 0.1s;
+        }
+        
+        .skills-category:nth-child(3) {
+            border-top-color: var(--accent);
+            transition-delay: 0.2s;
+        }
+        
+        .skills-category:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .skills-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .skills-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+        
+        .skills-category:hover h3::after {
+            width: 80px;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 40px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .skills-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .skills-category:nth-child(2) .skills-list li::before {
+            background: var(--secondary);
+        }
+        
+        .skills-category:nth-child(3) .skills-list li::before {
+            background: var(--gradient-accent);
+        }
+        
+        .skills-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .skills-progress {
+            margin-top: 24px;
+        }
+        
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.875rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+        
+        .skills-category:nth-child(2) .progress-fill {
+            background: var(--secondary);
+        }
+        
+        .skills-category:nth-child(3) .progress-fill {
+            background: var(--gradient-accent);
+        }
+        
+        /* Experience Section */
+        .experience-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .experience-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.2;
+        }
+        
+        .experience-item {
+            background: var(--lighter);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .experience-item.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .experience-item:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        
+        .experience-item:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .experience-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .experience-company {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .experience-date {
+            background: var(--primary-light);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .experience-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-top: 12px;
+        }
+        
+        .experience-location i {
+            color: var(--primary);
+        }
+        
+        .experience-description {
+            margin-top: 16px;
+            color: var(--dark);
+            opacity: 0.9;
+        }
+        
+        .experience-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .experience-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Education Section */
+        .education-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .education-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.2;
+        }
+        
+        .education-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 40px;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .education-item.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .education-item:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        
+        .education-item:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .education-item:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+        
+        .education-item:nth-child(5) {
+            transition-delay: 0.4s;
+        }
+        
+        .education-icon {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid white;
+        }
+        
+        .education-content {
+            background: var(--lighter);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .education-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .education-degree {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .education-institution {
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .education-date {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .education-details {
+            margin-top: 16px;
+            font-size: 1rem;
+            color: var(--dark);
+            opacity: 0.9;
+        }
+        
+        /* Certifications Section */
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .certification-item {
+            background: var(--lighter);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .certification-item.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .certification-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .certification-issuer {
+            color: var(--primary);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .certification-date {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .certification-details {
+            font-size: 0.9375rem;
+            color: var(--dark);
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+        
+        .certification-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .certification-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Publications Section */
+        .publication-item {
+            background: var(--lighter);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .publication-item.animate-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .publication-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        
+        .publication-date {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .publication-details {
+            font-size: 1rem;
+            color: var(--dark);
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+        
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .publication-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-method {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transform: translateX(-30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .contact-method.animate-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .contact-method:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        
+        .contact-method:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover .contact-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+        
+        .contact-text h4 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .contact-text a, .contact-text p {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            background: var(--lighter);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            transform: translateX(30px);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+        
+        .contact-form.animate-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--darker);
+            color: white;
+            padding: 80px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        
+        .footer-text {
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .scroll-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gray);
+            opacity: 0.5;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+        }
+        
+        .scroll-dot::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .scroll-dot:hover::after {
+            opacity: 1;
+            visibility: visible;
+            right: 25px;
+        }
+        
+        .scroll-dot.active {
+            background: var(--primary);
+            opacity: 1;
+            transform: scale(1.3);
+            border-color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-image {
+                height: 400px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links a {
+                color: white;
+                font-size: 1.25rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.25rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .scroll-indicator {
+                right: 20px;
+            }
+            
+            .back-to-top {
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .about-image {
+                height: 300px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .scroll-indicator {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Satvik Jogadand</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#about" data-section="about">About</a>
+                    <a href="#skills" data-section="skills">Skills</a>
+                    <a href="#experience" data-section="experience">Experience</a>
+                    <a href="#education" data-section="education">Education</a>
+                    <a href="#certifications" data-section="certifications">Certifications</a>
+                    <a href="#publications" data-section="publications">Publications</a>
+                    <a href="#contact" data-section="contact">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <div class="scroll-dot" data-section="hero" data-tooltip="Home"></div>
+        <div class="scroll-dot" data-section="about" data-tooltip="About"></div>
+        <div class="scroll-dot" data-section="skills" data-tooltip="Skills"></div>
+        <div class="scroll-dot" data-section="experience" data-tooltip="Experience"></div>
+        <div class="scroll-dot" data-section="education" data-tooltip="Education"></div>
+        <div class="scroll-dot" data-section="certifications" data-tooltip="Certifications"></div>
+        <div class="scroll-dot" data-section="publications" data-tooltip="Publications"></div>
+        <div class="scroll-dot" data-section="contact" data-tooltip="Contact"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-subtitle">Insurance & Risk Management Professional</span>
+                <h1>Satvik Jogadand</h1>
+                <p>PPO @ Bajaj Allianz | PGDM '25 – Insurance & Risk Management | IRM Level 1 | National Insurance Academy | BBA – HR & Finance, SCMS Pune.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <i class="fas fa-user"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Get To Know Me</span>
+                <h2>About Me</h2>
+                <p>A dedicated professional with expertise in insurance and risk management, combining academic excellence with practical industry experience.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Satvik Jogadand">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Insurance & Risk Management Specialist</h3>
+                    <p>I am a passionate professional with a strong background in insurance and risk management, currently enhancing my expertise through a PGDM program at the prestigious National Insurance Academy. My hands-on experience at Bajaj Allianz has provided me with valuable insights into the practical aspects of the insurance industry.</p>
+                    <p>With a solid foundation in business administration and specialized knowledge in risk management, I bring a unique combination of strategic thinking, analytical skills, and operational excellence to every challenge. My approach combines data-driven decision making with a deep understanding of industry regulations and best practices.</p>
+                    <p>Beyond technical skills, I pride myself on strong leadership capabilities, effective communication, and the ability to translate complex concepts into actionable strategies. I'm fluent in English and Hindi, with professional working proficiency in both languages.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years of Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">What I Offer</span>
+                <h2>Professional Skills</h2>
+                <p>A combination of technical expertise and soft skills that drive results in insurance and risk management.</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Core Competencies</h3>
+                    <ul class="skills-list">
+                        <li>Strategic Risk Management</li>
+                        <li>Insurance Policy Analysis</li>
+                        <li>Underwriting Principles</li>
+                        <li>Claims Management</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Leadership & Team Management</li>
+                        <li>Problem Solving & Decision Making</li>
+                    </ul>
+                    <div class="skills-progress">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Risk Assessment</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Team Leadership</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skills-list">
+                        <li>MS Office (Advanced)</li>
+                        <li>Power BI & Data Visualization</li>
+                        <li>Statistical Analysis</li>
+                        <li>Python & R Basics</li>
+                        <li>Insurance Software Systems</li>
+                        <li>Financial Modeling</li>
+                        <li>Technical Writing</li>
+                    </ul>
+                    <div class="skills-progress">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Data Analysis</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Financial Modeling</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Languages & Communication</h3>
+                    <ul class="skills-list">
+                        <li>English (Professional Proficiency)</li>
+                        <li>Hindi (Native Fluency)</li>
+                        <li>Marathi (Conversational)</li>
+                        <li>Business Communication</li>
+                        <li>Presentation Skills</li>
+                        <li>Negotiation Techniques</li>
+                        <li>Cross-functional Collaboration</li>
+                    </ul>
+                    <div class="skills-progress">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Business Communication</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Technical Writing</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">My Career Journey</span>
+                <h2>Professional Experience</h2>
+                <p>Hands-on experience in insurance and risk management from leading organizations.</p>
+            </div>
+            
+            <div class="experience-container">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Summer Internship</h3>
+                            <p class="experience-company">
+                                <i class="fas fa-building"></i> Bajaj Allianz General Insurance
+                            </p>
+                        </div>
+                        <span class="experience-date">May 2024 - July 2024</span>
+                    </div>
+                    <div class="experience-description">
+                        <p>Gained comprehensive experience in insurance operations and risk management strategies at one of India's leading general insurance companies. Worked on key projects involving:</p>
+                        <ul style="margin-top: 12px; padding-left: 20px;">
+                            <li>Policy analysis and risk assessment frameworks</li>
+                            <li>Customer service optimization strategies</li>
+                            <li>Claims processing efficiency improvements</li>
+                            <li>Market research for product development</li>
+                        </ul>
+                    </div>
+                    <div class="experience-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Risk Management</span>
+                        <span class="experience-tag">Insurance Operations</span>
+                        <span class="experience-tag">Policy Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Student Volunteer</h3>
+                            <p class="experience-company">
+                                <i class="fas fa-building"></i> The Climate Reality Project
+                            </p>
+                        </div>
+                        <span class="experience-date">Nov 2019 - Mar 2020</span>
+                    </div>
+                    <div class="experience-description">
+                        <p>Contributed to environmental awareness campaigns and sustainability initiatives, helping to educate communities about climate change solutions. Key responsibilities included:</p>
+                        <ul style="margin-top: 12px; padding-left: 20px;">
+                            <li>Organizing workshops on environmental sustainability</li>
+                            <li>Participating in tree plantation drives</li>
+                            <li>Developing educational materials</li>
+                            <li>Community outreach programs</li>
+                        </ul>
+                    </div>
+                    <div class="experience-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, Maharashtra, India</span>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Sustainability</span>
+                        <span class="experience-tag">Community Outreach</span>
+                        <span class="experience-tag">Environmental Awareness</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Summer Internship</h3>
+                            <p class="experience-company">
+                                <i class="fas fa-building"></i> UltraTech Cement
+                            </p>
+                        </div>
+                        <span class="experience-date">Apr 2019 - May 2019</span>
+                    </div>
+                    <div class="experience-description">
+                        <p>Gained valuable industry experience in one of India's leading cement manufacturing companies. Key contributions included:</p>
+                        <ul style="margin-top: 12px; padding-left: 20px;">
+                            <li>Assisted in market research projects</li>
+                            <li>Conducted data analysis for operational efficiency</li>
+                            <li>Learned about industrial operations and safety protocols</li>
+                            <li>Studied supply chain management processes</li>
+                        </ul>
+                    </div>
+                    <div class="experience-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Madhya Pradesh, India</span>
+                    </div>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Market Research</span>
+                        <span class="experience-tag">Data Analysis</span>
+                        <span class="experience-tag">Industrial Operations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">My Qualifications</span>
+                <h2>Education</h2>
+                <p>Academic background that forms the foundation of my professional expertise.</p>
+            </div>
+            
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">PGDM, Insurance & Risk Management</h3>
+                        <span class="education-institution">National Insurance Academy</span>
+                        <span class="education-date">July 2023 - March 2025</span>
+                        <div class="education-details">
+                            <p>Specialized postgraduate diploma focusing on insurance principles, risk assessment, and management strategies in the insurance sector. Comprehensive coursework includes:</p>
+                            <ul style="margin-top: 12px; padding-left: 20px;">
+                                <li>Actuarial science fundamentals</li>
+                                <li>Advanced underwriting practices</li>
+                                <li>Insurance regulatory frameworks</li>
+                                <li>Risk modeling and analysis</li>
+                                <li>Corporate risk management strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">IRM Level 1</h3>
+                        <span class="education-institution">Institute of Risk Management</span>
+                        <span class="education-date">March 2025</span>
+                        <div class="education-details">
+                            <p>Professional certification in risk management fundamentals, covering essential concepts and practical applications:</p>
+                            <ul style="margin-top: 12px; padding-left: 20px;">
+                                <li>Risk identification and assessment methodologies</li>
+                                <li>Risk mitigation and control strategies</li>
+                                <li>Enterprise risk management frameworks</li>
+                                <li>Application in business contexts</li>
+                                <li>Case studies and practical applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">BBA, HR & Finance</h3>
+                        <span class="education-institution">Symbiosis Centre for Management Studies, Pune</span>
+                        <span class="education-date">2018 - 2021</span>
+                        <div class="education-details">
+                            <p>Bachelor's degree with dual specialization in Human Resources and Finance, covering comprehensive business concepts:</p>
+                            <ul style="margin-top: 12px; padding-left: 20px;">
+                                <li>Organizational behavior and development</li>
+                                <li>Financial management and accounting</li>
+                                <li>Business strategy and planning</li>
+                                <li>Human resource management</li>
+                                <li>Business law and ethics</li>
+                            </ul>
+                            <p style="margin-top: 12px;"><strong>Achievement:</strong> Graduated with distinction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Senior Secondary Education, Commerce</h3>
+                        <span class="education-institution">Aditya Birla Public School</span>
+                        <span class="education-date">2017 - 2018</span>
+                        <div class="education-details">
+                            <p>Higher secondary education with commerce stream, focusing on key business and economic concepts:</p>
+                            <ul style="margin-top: 12px; padding-left: 20px;">
+                                <li>Accountancy and business studies</li>
+                                <li>Economics and business mathematics</li>
+                                <li>Entrepreneurship fundamentals</li>
+                                <li>Business communication</li>
+                            </ul>
+                            <p style="margin-top: 12px;"><strong>Achievement:</strong> 85% aggregate score</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Secondary Education, General</h3>
+                        <span class="education-institution">Aditya Birla Public School</span>
+                        <span class="education-date">2015 - 2016</span>
+                        <div class="education-details">
+                            <p>Completed secondary education with comprehensive curriculum in sciences, mathematics, and humanities:</p>
+                            <ul style="margin-top: 12px; padding-left: 20px;">
+                                <li>Mathematics and science fundamentals</li>
+                                <li>Social sciences and languages</li>
+                                <li>Computer applications</li>
+                                <li>Extracurricular activities</li>
+                            </ul>
+                            <p style="margin-top: 12px;"><strong>Achievement:</strong> 90% aggregate score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Professional Development</span>
+                <h2>Certifications</h2>
+                <p>Continuous learning to stay at the forefront of insurance and risk management.</p>
+            </div>
+            
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <h4>Managing Employee Performance</h4>
+                    <p class="certification-issuer">
+                        <i class="fas fa-award"></i> Coursera
+                    </p>
+                    <span class="certification-date">2023</span>
+                    <div class="certification-details">
+                        <p>Comprehensive training in performance management techniques, including:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li>Setting performance expectations and KPIs</li>
+                            <li>Effective feedback and coaching methods</li>
+                            <li>Performance evaluation frameworks</li>
+                            <li>Motivation strategies and improvement plans</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="certification-link">
+                        View Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <h4>AI For Everyone</h4>
+                    <p class="certification-issuer">
+                        <i class="fas fa-award"></i> Coursera
+                    </p>
+                    <span class="certification-date">2023</span>
+                    <div class="certification-details">
+                        <p>Foundational knowledge of artificial intelligence concepts and applications:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li>AI concepts and terminology</li>
+                            <li>Machine learning basics</li>
+                            <li>Business applications of AI</li>
+                            <li>Ethical considerations in AI</li>
+                            <li>AI implementation strategies</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="certification-link">
+                        View Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <h4>The hidden value – Lean in manufacturing and services</h4>
+                    <p class="certification-issuer">
+                        <i class="fas fa-award"></i> Coursera
+                    </p>
+                    <span class="certification-date">2023</span>
+                    <div class="certification-details">
+                        <p>In-depth exploration of lean principles and methodologies:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li>Lean manufacturing concepts</li>
+                            <li>Value stream mapping</li>
+                            <li>Waste elimination techniques</li>
+                            <li>Continuous improvement frameworks</li>
+                            <li>Application in service industries</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="certification-link">
+                        View Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="certification-item">
+                    <h4>Demystifying Life Insurance Business</h4>
+                    <p class="certification-issuer">
+                        <i class="fas fa-award"></i> National Insurance Academy
+                    </p>
+                    <span class="certification-date">2023</span>
+                    <div class="certification-details">
+                        <p>Specialized training in life insurance operations and management:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li>Life insurance products and features</li>
+                            <li>Underwriting processes</li>
+                            <li>Risk assessment in life insurance</li>
+                            <li>Policy design and premium calculation</li>
+                            <li>Claims management procedures</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="certification-link">
+                        View Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="certification-item">
+                    <h4>Digital Accessibility as a Business Practice</h4>
+                    <p class="certification-issuer">
+                        <i class="fas fa-award"></i> Coursera
+                    </p>
+                    <span class="certification-date">2023</span>
+                    <div class="certification-details">
+                        <p>Training in creating accessible digital products and services:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
+                            <li>Principles of digital accessibility</li>
+                            <li>WCAG guidelines and standards</li>
+                            <li>Assistive technologies</li>
+                            <li>Inclusive design principles</li>
+                            <li>Accessibility testing methods</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="certification-link">
+                        View Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section" id="publications">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Research & Insights</span>
+                <h2>Publications</h2>
+                <p>Contributions to knowledge in the field of finance and insurance.</p>
+            </div>
+            
+            <div class="publication-item">
+                <h4>EFFECTS OF DEMONETIZATION ON PREPAID INSTRUMENT INDIA</h4>
+                <span class="publication-date">2021</span>
+                <div class="publication-details">
+                    <p>Comprehensive research paper analyzing the impact of India's 2016 demonetization on prepaid payment instruments and digital payment adoption trends in the Indian economy. Key findings include:</p>
+                    <ul style="margin-top: 12px; padding-left: 20px;">
+                        <li>Behavioral shifts in payment methods post-demonetization</li>
+                        <li>Growth patterns of digital payment platforms</li>
+                        <li>Impact on financial inclusion initiatives</li>
+                        <li>Long-term effects on cashless transactions</li>
+                        <li>Comparative analysis of prepaid instrument usage before and after demonetization</li>
+                    </ul>
+                    <p style="margin-top: 12px;">The study provides valuable insights for policymakers and financial institutions on the evolving payment landscape in India.</p>
+                </div>
+                <a href="#" class="publication-link">
+                    Read Publication <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for professional inquiries or opportunities.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:satvikjogadand@gmail.com">satvikjogadand@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a href="tel:+916261414868">+91 6261414868</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/satvikjogadand" target="_blank">linkedin.com/in/satvikjogadand</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjvnybwz" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="_subject" value="New message from your portfolio">
+                    <input type="hidden" name="_replyto" value="satvikjogadand@gmail.com">
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">Satvik Jogadand</a>
+            <p class="footer-text">Insurance & Risk Management Professional</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/satvikjogadand" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:satvikjogadand@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+916261414868" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            
+            <p class="copyright">© 2024 Satvik Jogadand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Hero animation on load
+        const heroSection = document.querySelector('.hero');
+        setTimeout(() => {
+            heroSection.classList.add('animate-in');
+        }, 300);
+        
+        // Improved isInViewport function
+        function isInViewport(element, threshold = 0.5) {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+            
+            const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+            const visibleWidth = Math.min(rect.right, windowWidth) - Math.max(rect.left, 0);
+            
+            if (visibleHeight <= 0 || visibleWidth <= 0) return false;
+            
+            const visibleArea = visibleHeight * visibleWidth;
+            const elementArea = rect.height * rect.width;
+            
+            return (visibleArea / elementArea) >= threshold;
+        }
+        
+        // Scroll animations
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll(
+                '.section-title, .about-image, .about-text, .skills-category, ' +
+                '.experience-item, .education-item, .certification-item, ' +
+                '.publication-item, .contact-method, .contact-form'
+            );
+            
+            elements.forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('animate-in');
+                }
+            });
+            
+            // Update scroll indicator
+            updateScrollIndicator();
+            
+            // Back to top button visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        };
+        
+        // Update scroll indicator
+        const updateScrollIndicator = () => {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const dots = scrollIndicator.querySelectorAll('.scroll-dot');
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.id;
+                }
+            });
+            
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.dataset.section === currentSection) {
+                    dot.classList.add('active');
+                }
+            });
+        };
+        
+        // Scroll to section when clicking on scroll indicator dots
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        scrollIndicator.addEventListener('click', (e) => {
+            if (e.target.classList.contains('scroll-dot')) {
+                const sectionId = e.target.dataset.section;
+                const targetSection = document.getElementById(sectionId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple form validation
+                const name = this.querySelector('#name').value.trim();
+                const email = this.querySelector('#email').value.trim();
+                const message = this.querySelector('#message').value.trim();
+                
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Here you would typically send the form data to a server
+                // For this example, we'll just show a success message
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+        
+        // Initialize animations
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        animateOnScroll(); // Run once on load
+        
+        // Debounce scroll events for better performance
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(function() {
+                animateOnScroll();
+            }, 66);
+        }, false);
+    </script>
+</body>
+</html>
